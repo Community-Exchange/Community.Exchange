@@ -1,15 +1,15 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row'
+// import Col from 'react-bootstrap/Col';
+// import Row from 'react-bootstrap/Row'
 import Button from "react-bootstrap/Button";
 import "./forms.css";
 
 export default function ExchangeForm() {
     
   return (
-    <div className="container">
-      <h1 className="form-header">Exchange Information </h1>
+    <div className="container form-font">
+      <h1 className="form-header">Make an Exchange </h1>
       <h4 className="form-header">Username: </h4>
       <Form>
         <Form.Group>
@@ -35,32 +35,69 @@ export default function ExchangeForm() {
         </Form.Group>
 
         <fieldset>
-          <Form.Group>
-            <Form.Label >
+        <Form.Label >
             What service or item will you exchange in return?
             </Form.Label>
-            <Col sm={12}>
+          <Form.Group className="check-border">
+            
+            {/* <Col sm={12}> */}
          
               <Form.Check
-                type="radio"
+                type="checkbox"
                 label="Auto Mechanics"
-                name="formHorizontalRadios"
+                name="Auto Mechanics"
                 id="formHorizontalRadios1"
               />
               <Form.Check
-                type="radio"
+                type="checkbox"
                 label="Childcare"
-                name="formHorizontalRadios"
+                name="Childcare"
                 id="formHorizontalRadios2"
               />
               <Form.Check
-                type="radio"
+                type="checkbox"
                 label="Cleaning"
                 name="formHorizontalRadios"
                 id="formHorizontalRadios3"
               />
              
-            </Col>
+              <Form.Check
+                type="checkbox"
+                label="Cooking"
+                name="Cooking"
+                id="formHorizontalRadios3"
+              />
+              <Form.Check
+                type="checkbox"
+                label="Education/Tutoring"
+                name="Education/Tutoring"
+                id="formHorizontalRadios3"
+              />
+              <Form.Check
+                type="checkbox"
+                label="Landscaping"
+                name="Landscaping"
+                id="formHorizontalRadios3"
+              />
+              <Form.Check
+                type="checkbox"
+                label="Pet Care"
+                name="Pet Care"
+                id="formHorizontalRadios3"
+              />
+              <Form.Check
+                type="checkbox"
+                label="Plumbing"
+                name="Plumbing"
+                id="formHorizontalRadios3"
+              />
+              <Form.Check
+                type="checkbox"
+                label="Other"
+                name="Other"
+                id="formHorizontalRadios3"
+              />
+            {/* </Col> */}
           </Form.Group>
         </fieldset>
         <Form.Group controlId="exampleForm.ControlTextarea1">
