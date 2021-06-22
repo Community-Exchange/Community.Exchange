@@ -1,13 +1,15 @@
 import React from "react";
 // import ExchangePost from "../components/Forms/ExchangePost";
 import ExchangeForm from "../components/Forms/ExchangeForm";
-import Navbar from "../components/Nav/Navbar";
+
+import Nav from "../components/Nav/Nav";
 
 export default function Dashboard() {
   return (
     <div>
-      <Navbar />
+      
       {/* <ExchangePost /> */}
+      <Nav/>
       <ExchangeForm/>
     </div>
   );
