@@ -1,0 +1,12 @@
+.card-style{
+    color: black !important;
+    text-align: center;
+}
+
+.profile-img{
+    width: auto;
+    height: auto;
+}
+.user{
+    font-size: 2vw;
+}
