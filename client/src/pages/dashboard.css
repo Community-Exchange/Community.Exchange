@@ -1,0 +1,26 @@
+.dashboard-style {
+    margin: auto;
+    margin-top: 20px;
+    background-color: lightgrey;
+    width: 80vw;
+    height: 80vh;
+    margin-bottom: 50px;
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+.dash-post {
+    /* overflow-y: scroll; */
+    height: auto;
+    background-color: white;
+}
+
+.title-style{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dash-profile {
+    position: sticky;
+}
