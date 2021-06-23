@@ -2,18 +2,22 @@
     margin: auto;
     margin-top: 20px;
     background-color: lightgrey;
-    width: 80vw;
+    width: 85vw;
     height: 80vh;
     margin-bottom: 50px;
     border: 1px solid black;
-    border-radius: 10px;
-    overflow-y: scroll;
+    /* overflow-y: auto; */
+    
 }
 
 .dash-post {
     /* overflow-y: scroll; */
     height: auto;
-    background-color: white;
+    background-color: white !important;
+    float: left;
+    width: 50%;
+    height: 100%;
+    overflow: scroll;
 }
 
 .title-style{
@@ -22,5 +26,17 @@
 }
 
 .dash-profile {
-    position: sticky;
+    float: left;
+    width: 50%;
+    height: 100%;
+    overflow: scroll;
 }
+
+.dash-row{
+    height: 100%;
+}
+
+/* .container-scroll {
+    overflow: scroll;
+} */
+
