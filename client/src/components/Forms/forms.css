@@ -1,6 +1,6 @@
 .container {
   margin: auto;
-  width: 60%;
+  width: 80%;
   height: auto;
   background-color: lightgray;
   border: 1px solid black;
@@ -21,6 +21,7 @@
   background-color: white;
   border: 1px solid #ced4da;
   border-radius: .25rem;
+  
 }
 
 .input-width {

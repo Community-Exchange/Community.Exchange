@@ -1,9 +1,12 @@
 import React from "react";
-import Form from "react-bootstrap/Form";
-// import Col from 'react-bootstrap/Col';
-// import Row from 'react-bootstrap/Row'
-import Button from "react-bootstrap/Button";
+import {Form, Button} from "react-bootstrap";
 import "./forms.css";
+// import API from "./"
+
+
+
+
+
 
 export default function ExchangeForm() {
   return (
@@ -51,7 +54,7 @@ export default function ExchangeForm() {
           <Form.Label>
             What service or item will you exchange in return?
           </Form.Label>
-          <Form.Group className="check-border">
+          <Form.Group className="check-border ">
             <Form.Check
               type="checkbox"
               label="Auto Mechanics"

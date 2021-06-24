@@ -1,12 +1,28 @@
 .card-style{
     color: black !important;
     text-align: center;
+    margin-top: 10px;
+    border: 1px solid black;
 }
 
 .profile-img{
     width: auto;
     height: auto;
+    align-items: center;
 }
 .user{
-    font-size: 2vw;
+    font-size: 3vw;
+}
+
+.user-body{
+    font-size: 1.5vw !important;
+    padding: 2px;
+    margin: 1px;
+    background-color: cornflowerblue;
+}
+.user-body2{
+    font-size: 1.5vw !important;
+    padding: 2px 5px;
+    margin: 1px;
+    background-color: cornflowerblue;
 }
