@@ -1,18 +1,20 @@
 import React from "react";
-import ExchangeForm from "components/Forms/ExchangeForm";
-// import { Container, Col, Row } from "react-bootstrap";
-// import ProfileCard from "components/ProfileCard/ProfileCard";
-// import ExchangesCard from "components/Exchanges/ExchangesCard";
+// import ExchangeForm from "components/Forms/ExchangeForm";
+import { Container, Col, Row } from "react-bootstrap";
+import ProfileCard from "components/ProfileCard/ProfileCard";
+import ExchangesCard from "components/Exchanges/ExchangesCard";
 import Nav from "components/Nav/Nav";
 import "./dashboard.css";
 
 export default function Dashboard() {
+
+  
   return (
     <div>
       <Nav />
-      <ExchangeForm />
+      {/* <ExchangeForm /> */}
       
-      {/* <div className="container ">
+      <div className="container ">
         <h3 className="title-style">Exchange Posts</h3>
         <Container className="dashboard-style">
           <Row className="dash-row">
@@ -24,7 +26,7 @@ export default function Dashboard() {
             </Col>
           </Row>
         </Container>
-      </div> */}
+      </div>
     </div>
   );
 }

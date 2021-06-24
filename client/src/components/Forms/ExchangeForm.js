@@ -10,6 +10,7 @@ import "./forms.css";
 
 export default function ExchangeForm() {
   return (
+    <>
     <div className="container form-font">
       <h1 className="form-header">Make an Exchange </h1>
       <h4 className="form-header">Username: </h4>
@@ -129,5 +130,6 @@ export default function ExchangeForm() {
         </div>
       </Form>
     </div>
+    </>
   );
 }

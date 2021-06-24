@@ -2,7 +2,11 @@ import React from "react";
 import { Card, Button } from "react-bootstrap";
 import "./exchangeCard.css";
 
+
+
 export default function PostProfileCard() {
+
+
   return (
     <div className="mt-2"  >
       <Card >
