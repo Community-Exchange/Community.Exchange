@@ -12,7 +12,7 @@ export default function History() {
     <div>
       <Nav />
       <div className="container ">
-        <h3 className="title-style">Claimed Exchanges</h3>
+        <h3 className="title-style">Exchange History</h3>
         <Container className="dashboard-style">
           <Row className="dash-row">
             <Col md={4} className="dash-profile ">
