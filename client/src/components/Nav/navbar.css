@@ -1,0 +1,42 @@
+.button {
+    background-color: white;
+    color: black;
+  }
+
+  .brand {
+      font-size: 2rem;
+    
+  }
+  .navbar-light {
+    
+    background-color: burlywood !important;
+    height: 100px;
+  }
+  /* unvisited link */
+a:link {
+    color:white;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: green;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: darkblue;
+  }
+  
+  /* selected link */
+  a:active {
+    color: blue;
+  }
+
+/* .navbar-toggler {
+    padding: .25rem .75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: .25rem;
+} */

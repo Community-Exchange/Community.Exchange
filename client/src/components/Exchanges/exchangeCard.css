@@ -1,0 +1,34 @@
+.card-styles {
+  width: auto;
+  text-align: left;
+  border: 1px solid black;
+}
+
+.exchange-info {
+  font-size: 1.5vw;
+  line-height: 1.25;
+  text-align: left;
+  padding: 1%;
+}
+
+#post-profile {
+  text-align: center;
+  font-size: 1.5vw;
+}
+
+#username {
+  font-size: 2.5vw;
+  width: 100%;
+  text-align: center;
+}
+
+/* #profileExchange{
+    border: 1px solid black !important;
+} */
+
+.profilePostButton {
+  font-size: 1vw !important;
+  padding: 2px;
+  margin: 1px;
+  background-color: cornflowerblue;
+}
