@@ -1,0 +1,42 @@
+.dashboard-style {
+    margin: auto;
+    margin-top: 20px;
+    background-color: lightgrey;
+    width: 85vw;
+    height: 80vh;
+    margin-bottom: 50px;
+    border: 1px solid black;
+    /* overflow-y: auto; */
+    
+}
+
+.dash-post {
+    /* overflow-y: scroll; */
+    height: auto;
+    background-color: white !important;
+    float: left;
+    width: 50%;
+    height: 100%;
+    overflow: scroll;
+}
+
+.title-style{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dash-profile {
+    float: left;
+    width: 50%;
+    height: 100%;
+    overflow: scroll;
+}
+
+.dash-row{
+    height: 100%;
+}
+
+/* .container-scroll {
+    overflow: scroll;
+} */
+
