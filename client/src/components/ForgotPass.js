@@ -5,7 +5,7 @@ import { Link, useHistory } from "react-router-dom";
 
 export default function ForgotPass() {
   const emailRef = useRef();
-  const { login, currentUser } = useAuth();
+  const { currentUser } = useAuth();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const history = useHistory();
