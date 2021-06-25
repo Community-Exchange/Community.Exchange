@@ -32,10 +32,126 @@ export default function Signup() {
 
   return (
     <>
-      <Card>
+    <div className="container form-font">
+      <h1 className="form-header">Signup</h1>
+      <Form>
+        <Form.Group>
+          <Form.Label>Name</Form.Label>
+          <Form.Control type="text" placeholder="Jane Doe" />
+        </Form.Group>
+        <Form.Group>
+          <Form.Label>City</Form.Label>
+          <Form.Control type="text" placeholder="Your City" />
+        </Form.Group>
+        <Form.Group>
+          <Form.Label>Email</Form.Label>
+          <Form.Control type="text" placeholder="janedoe@gmail.com" />
+        </Form.Group>
+        <Form.Group>
+          <Form.Label>Password</Form.Label>
+          <Form.Control type="password" placeholder="at least 6 characters" />
+        </Form.Group>
+        <Form.Group>
+          <Form.Label>
+            What service or item will you exchange in return?
+          </Form.Label>
+          <Form.Control as="select" multiple>
+            <option>Auto Mechanics</option>
+            <option>Childcare</option>
+            <option>Cleaning</option>
+            <option>Cooking</option>
+            <option>Education/Tutoring</option>
+            <option>Landscaping</option>
+            <option>Pet Care</option>
+            <option>Plumbing</option>
+            <option>Other</option>
+          </Form.Control>
+        </Form.Group>
+        <fieldset>
+          <Form.Label>
+            What service or item will you exchange in return?
+          </Form.Label>
+          <Form.Group className="check-border">
+            {/* <Col sm={12}> */}
+
+            <Form.Check
+              type="checkbox"
+              label="Auto Mechanics"
+              name="Auto Mechanics"
+              id="formHorizontalRadios1"
+            />
+            <Form.Check
+              type="checkbox"
+              label="Childcare"
+              name="Childcare"
+              id="formHorizontalRadios2"
+            />
+            <Form.Check
+              type="checkbox"
+              label="Cleaning"
+              name="formHorizontalRadios"
+              id="formHorizontalRadios3"
+            />
+
+            <Form.Check
+              type="checkbox"
+              label="Cooking"
+              name="Cooking"
+              id="formHorizontalRadios3"
+            />
+            <Form.Check
+              type="checkbox"
+              label="Education/Tutoring"
+              name="Education/Tutoring"
+              id="formHorizontalRadios3"
+            />
+            <Form.Check
+              type="checkbox"
+              label="Landscaping"
+              name="Landscaping"
+              id="formHorizontalRadios3"
+            />
+            <Form.Check
+              type="checkbox"
+              label="Pet Care"
+              name="Pet Care"
+              id="formHorizontalRadios3"
+            />
+            <Form.Check
+              type="checkbox"
+              label="Plumbing"
+              name="Plumbing"
+              id="formHorizontalRadios3"
+            />
+            <Form.Check
+              type="checkbox"
+              label="Other"
+              name="Other"
+              id="formHorizontalRadios3"
+            />
+            {/* </Col> */}
+          </Form.Group>
+        </fieldset>
+        <Form.Group controlId="exampleForm.ControlTextarea1">
+          <Form.Label>Additional Information:</Form.Label>
+          <Form.Control as="textarea" rows={10} />
+        </Form.Group>
+        <Form.Group>
+          <Form.File
+            id="exampleFormControlFile1"
+            label="Include an image of your Exchange item."
+          />
+        </Form.Group>
+        <div className="div-button">
+          <Button className="button" variant="outline-secondary">
+            Post Exchange
+          </Button>
+        </div>
+      </Form>
+    </div>
+      {/* <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Sign Up</h2>
-          {/* testing purposes */}
           {currentUser && currentUser.email}
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
@@ -59,7 +175,7 @@ export default function Signup() {
       </Card>
       <div className="w-100 text-center mt">
         Already have an account? <Link to="/login">Log In</Link>
-      </div>
+      </div> */}
     </>
   );
 }
