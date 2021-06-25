@@ -1,6 +1,6 @@
 .container {
   margin: auto;
-  width: 80%;
+  width: 60%;
   height: auto;
   background-color: lightgray;
   border: 1px solid black;
@@ -15,13 +15,8 @@
 
 .check-border {
   /* border: 1px solid black !important; */
-  background-clip: padding-box;
-  padding: 5px;
-  width: 100%;
+  padding: 7px;
   background-color: white;
-  border: 1px solid #ced4da;
-  border-radius: .25rem;
-  
 }
 
 .input-width {

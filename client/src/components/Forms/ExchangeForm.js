@@ -1,40 +1,43 @@
-import React from "react";
-import {Form, Button} from "react-bootstrap";
+import React, { useState } from "react";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
 import "./forms.css";
-// import API from "./"
-
-
-
-
-
 
 export default function ExchangeForm() {
+  const [need, setNeed] = useState();
+  const [exchange, setExchange] = useState([]);
+  const [description, setDescription] = useState();
+
   return (
-    <>
     <div className="container form-font">
       <h1 className="form-header">Make an Exchange </h1>
       <h4 className="form-header">Username: </h4>
       <Form>
         <Form.Group>
           <Form.Label>What do you need?</Form.Label>
-          <Form.Group >
-            <Form.Check inline
+          <Form.Control type="text" placeholder="Help with yard work..." />
+        </Form.Group>
+        <fieldset>
+          <Form.Label>
+            Will you be exchanging an item or services today?
+          </Form.Label>
+          <Form.Group className="check-border">
+            <Form.Check
               type="checkbox"
-              label="Goods"
-              name="Goods"
+              label="Item"
+              name="Item"
               id="formHorizontalRadios1"
             />
-            <Form.Check inline
+            <Form.Check
               type="checkbox"
-              label="Service"
-              name="Service"
+              label="services"
+              name="services"
               id="formHorizontalRadios2"
             />
           </Form.Group>
-          <Form.Control type="text" placeholder="Help with yard work..." />
-        </Form.Group>
-
-        {/* <Form.Group>
+        </fieldset>
+        ;
+        <Form.Group>
           <Form.Label>
             What service or item will you exchange in return?
           </Form.Label>
@@ -49,13 +52,14 @@ export default function ExchangeForm() {
             <option>Plumbing</option>
             <option>Other</option>
           </Form.Control>
-        </Form.Group> */}
-
+        </Form.Group>
         <fieldset>
           <Form.Label>
             What service or item will you exchange in return?
           </Form.Label>
-          <Form.Group className="check-border ">
+          <Form.Group className="check-border">
+            {/* <Col sm={12}> */}
+
             <Form.Check
               type="checkbox"
               label="Auto Mechanics"
@@ -111,6 +115,7 @@ export default function ExchangeForm() {
               name="Other"
               id="formHorizontalRadios3"
             />
+            {/* </Col> */}
           </Form.Group>
         </fieldset>
         <Form.Group controlId="exampleForm.ControlTextarea1">
@@ -130,6 +135,5 @@ export default function ExchangeForm() {
         </div>
       </Form>
     </div>
-    </>
   );
 }

@@ -1,5 +1,4 @@
 import React from "react";
-// import ExchangeForm from "components/Forms/ExchangeForm";
 import { Container, Col, Row } from "react-bootstrap";
 import ProfileCard from "components/ProfileCard/ProfileCard";
 import Claimed from "components/Exchanges/Claimed.js"
@@ -12,8 +11,6 @@ export default function History() {
   return (
     <div>
       <Nav />
-      {/* <ExchangeForm /> */}
-      
       <div className="container ">
         <h3 className="title-style">Claimed Exchanges</h3>
         <Container className="dashboard-style">
