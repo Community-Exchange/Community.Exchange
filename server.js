@@ -1,6 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const routes = require("./routes/api-routes");
+// const routes = require("./routes/api-routes");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -21,7 +21,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/community", {
   useFindAndModify: false,
 });
 
-app.use(routes);
+// app.use(routes);
 
 
 app.listen(PORT, () => {

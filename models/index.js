@@ -1,5 +1,5 @@
-// module.exports = {
-//     User: require("./user"),
-//     ExchangeItem: require("./exchangeItem")
+module.exports = {
+    User: require("./user"),
+    ExchangeItem: require("./exchangeItem")
 
-// };
+};
