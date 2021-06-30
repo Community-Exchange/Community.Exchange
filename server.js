@@ -1,6 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
-// const routes = require("./routes/api-routes");
+const routes = require("./routes/apiRoutes");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -19,9 +19,16 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/community", {
   useUnifiedTopology: true,
   useCreateIndex: true,
   useFindAndModify: false,
-});
+  
+}, () => console.log("Connected to db."));
 
-// app.use(routes);
+app.use(routes);
+// app.use((err, req, res, text) =>{
+//   console.log(err.stack);
+//   res.type("text/plain");
+//   res.status(500);
+//   res.send("internal server error 500");
+// })
 
 
 app.listen(PORT, () => {

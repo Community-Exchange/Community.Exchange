@@ -1,7 +1,10 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const userSchema = new Schema({
-  userID: {
+  userId: {
+    type: String,
+  },
+  name: {
     type: String,
   },
   email: {
@@ -10,10 +13,6 @@ const userSchema = new Schema({
   city: {
     type: String,
   },
-//   skills collected at Signup
-  exchangeCurrency: [{
-    type: String,
-  }],
 //   "need" from Exchange Post Form
   exchangeItem: [{
     type: Schema.Types.ObjectId,
