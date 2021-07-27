@@ -13,4 +13,21 @@ router.post("/api/user", ({body}, res) => {
     });
 });
 
+router.post("/api/exchanges", (req, res) => {
+    
+})
+
+router.get("/api/user/:id", (req, res) => {
+    console.log(req);
+    User.findOne({userId: req.params.userId}).then((userData ) => {
+        console.log("here's the user: "+ userData);
+        res.json(userData);
+    }).catch((err) =>{
+        console.log("there was an error:" + err);
+        res.json(err);
+    })
+})
+
+
+
 module.exports = router;
