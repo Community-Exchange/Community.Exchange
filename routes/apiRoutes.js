@@ -18,8 +18,8 @@ router.post("/api/exchanges", (req, res) => {
 })
 
 router.get("/api/user/:id", (req, res) => {
-    console.log(req);
-    User.findOne({userId: req.params.userId}).then((userData ) => {
+    
+    User.findOne({email: req.params.id}).then((userData ) => {
         console.log("here's the user: "+ userData);
         res.json(userData);
     }).catch((err) =>{
