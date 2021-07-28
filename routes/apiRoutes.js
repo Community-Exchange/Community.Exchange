@@ -26,6 +26,17 @@ router.get("/api/user/:id", (req, res) => {
         console.log("there was an error:" + err);
         res.json(err);
     })
+});
+
+router.get("/api/exchanges/:id", (req, res) => {
+    User.findOne({email: req.params.id}).then(dbUser => {
+        ExchangeItem.find({city: dbUser.city}).sort({date: -1}).then(dbExchange =>{
+            res.json(dbExchange);
+        }).catch(error => {
+            console.log("Error loading exchanges for this user", error);
+            res.json(error);
+        })
+    })
 })
 
 
