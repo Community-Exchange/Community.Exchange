@@ -11,13 +11,13 @@ import PostProfileCard from "components/Exchanges/PostProfileCard";
 import tempPhoto from "img/tempItem.png";
 import "./exchangeCard.css";
 
-export default function ExchangesCard() {
+export default function ExchangesCard(props) {
   return (
     <div className="mt-3">
       <Card className="card-styles">
-        <div className="container">
-          <Row>
-            <Col md={6}>
+        
+          <Row id="col-profile">
+            <Col  md={12}>
               <PostProfileCard />
             </Col>
           </Row>
@@ -28,22 +28,22 @@ export default function ExchangesCard() {
             <Col md={8}>
               <ListGroup className="exchange-info" variant="flush">
                 <ListGroup.Item className="exchange-info">
-                  <b>{`City:  `}</b>Seattle
+                  <b>{`City:  `}</b>{props.city}
                 </ListGroup.Item>
                 <ListGroup.Item className="exchange-info">
-                  <b>{`Contact:  `}</b>user@gmail.com
+                  <b>{`Contact:  `}</b>{props.email}
                 </ListGroup.Item>
                 <ListGroup.Item className="exchange-info">
-                  <b>{`Item:  `}</b>Shoes
+                  <b>{`Item:  `}</b>{props.item}
                 </ListGroup.Item>
                 
                 <ListGroup.Item className="exchange-info">
-                  <b>{`Info:  `}</b>Size 8 leather. Email me for details.
+                  <b>{`Info:  `}</b>{props.details}
                 </ListGroup.Item>
               </ListGroup>
             </Col>
           </Row>
-        </div>
+        
       </Card>
     </div>
   );
