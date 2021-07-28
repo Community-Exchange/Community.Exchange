@@ -1,7 +1,7 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState, useEffect, createContext } from "react";
 import { auth } from "../firebase";
 
-const AuthContext = React.createContext();
+const AuthContext = createContext();
 
 export function useAuth() {
   return useContext(AuthContext);
@@ -11,13 +11,12 @@ export function AuthProvider({ children }) {
   const [currentUser, setCurrentUser] = useState();
   const [loading, setLoading] = useState(true);
 
-  function signup(email, password) {
-    //   function that would be changed if changing type of authentication 
+  function createAccount(email, password) {
+    
     return auth.createUserWithEmailAndPassword(email, password);
   }
 
   function login(email, password) {
-    //   If we don't want to use firebase in the future we can change the code inside of this function to reflect that. Reusable code.
     return auth.signInWithEmailAndPassword(email, password);
   }
 
@@ -36,7 +35,7 @@ export function AuthProvider({ children }) {
 
   const value = {
     currentUser,
-    signup,
+    createAccount,
     login,
     logout
   };
