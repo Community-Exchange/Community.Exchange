@@ -1,34 +1,54 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useAuth } from "contexts/AuthContext";
+import API from "utils/API";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import "./forms.css";
 
-export default function ExchangeForm() {
+export default function ExchangeForm(props) {
+  const {currentUser} = useAuth();
+  const [user, setUser] = useState();
   const [need, setNeed] = useState();
   const [exchange, setExchange] = useState([]);
   const [description, setDescription] = useState();
+  const [error, setError] = useState();
+
+useEffect( async () => {
+
+  let resultFormUser = await API.getUser(currentUser.email);
+  if(error) {
+    console.log(error);
+  };
+  setUser(resultFormUser.data.name);
+  
+}, [])
+  // const handleSubmit = () => {
+  //   e.preventDefault();
+    
+
+  // }
 
   return (
     <div className="container form-font">
       <h1 className="form-header">Make an Exchange </h1>
-      <h4 className="form-header">Username: </h4>
+      <h4 className="form-header">{user} </h4>
       <Form>
-        <Form.Group>
+        <Form.Group name="need">
           <Form.Label>What do you need?</Form.Label>
           <Form.Control type="text" placeholder="Help with yard work..." />
         </Form.Group>
         <fieldset>
           <Form.Label>
-            Will you be exchanging an item or services today?
+            Will you be exchanging in return?
           </Form.Label>
-          <Form.Group className="check-border">
-            <Form.Check
+          <Form.Group >
+            <Form.Check inline
               type="checkbox"
               label="Item"
               name="Item"
               id="formHorizontalRadios1"
             />
-            <Form.Check
+            <Form.Check inline
               type="checkbox"
               label="services"
               name="services"
@@ -36,23 +56,6 @@ export default function ExchangeForm() {
             />
           </Form.Group>
         </fieldset>
-        ;
-        <Form.Group>
-          <Form.Label>
-            What service or item will you exchange in return?
-          </Form.Label>
-          <Form.Control as="select" multiple>
-            <option>Auto Mechanics</option>
-            <option>Childcare</option>
-            <option>Cleaning</option>
-            <option>Cooking</option>
-            <option>Education/Tutoring</option>
-            <option>Landscaping</option>
-            <option>Pet Care</option>
-            <option>Plumbing</option>
-            <option>Other</option>
-          </Form.Control>
-        </Form.Group>
         <fieldset>
           <Form.Label>
             What service or item will you exchange in return?
@@ -129,7 +132,7 @@ export default function ExchangeForm() {
           />
         </Form.Group>
         <div className="div-button">
-          <Button className="button" variant="outline-secondary">
+          <Button  className="button" variant="outline-secondary">
             Post Exchange
           </Button>
         </div>

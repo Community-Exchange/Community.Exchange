@@ -4,15 +4,15 @@ import "./exchangeCard.css";
 
 
 
-export default function PostProfileCard() {
+export default function PostProfileCard(props) {
 
 
   return (
-    <div className="mt-2"  >
-      <Card >
+    <div  className="mt-2 "  >
+      <Card id="post-profileCard">
         <Card.Body id="post-profile" >
           <Card.Title id="username"
-          >{`Username`}</Card.Title>
+          >UserName{props.user}</Card.Title>
           <Button className="profilePostButton"  href="#">Exchange</Button> 
           <Button  className="profilePostButton" href="#">Questions?</Button>
         </Card.Body>

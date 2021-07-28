@@ -1,7 +1,8 @@
 .card-styles {
-  width: auto;
+  width: 90%;
   text-align: left;
   border: 1px solid black;
+  align-items: center !important;
 }
 
 .exchange-info {
@@ -16,10 +17,18 @@
   font-size: 1.5vw;
 }
 
+#post-profileCard {
+  width: 50%;
+}
+
 #username {
   font-size: 2vw;
   width: 100%;
   text-align: center;
+}
+
+#col-profile {
+  width: 100%;
 }
 
 /* #profileExchange{
