@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Form, Button, Card, Alert } from "react-bootstrap";
 import { useAuth } from "../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
@@ -6,10 +6,14 @@ import { Link, useHistory } from "react-router-dom";
 export default function Login() {
   const emailRef = useRef();
   const passwordRef = useRef();
-  const { login, currentUser } = useAuth();
+  const { logout, login, currentUser } = useAuth();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const history = useHistory();
+
+  useEffect(() => {
+  logout();
+  }, [])
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -31,7 +35,7 @@ export default function Login() {
         <Card.Body>
           <h2 className="text-center mb-4">Log In</h2>
           {/* testing purposes */}
-          {currentUser && currentUser.email}
+          {/* {currentUser && currentUser.email} */}
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
             <Form.Group id="email">
