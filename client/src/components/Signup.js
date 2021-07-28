@@ -27,7 +27,10 @@ export default function Signup() {
      return setError("Passwords do not match.");
     };
     try{
-      const user = await createAccount(emailRef.current.value, passwordRef.current.value);
+      const user = await createAccount(
+        emailRef.current.value, 
+        passwordRef.current.value
+        );
         API.saveNewUser({
           userId: user.user.uid,
           name: name,
