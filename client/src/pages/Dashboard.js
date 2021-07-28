@@ -10,17 +10,46 @@ import "./dashboard.css";
 export default function Dashboard() {
   const { currentUser } = useAuth();
   const [loading, setLoading] = useState(false);
-  const [data, setData] = useState({});
-  const [user, setUser] = useState(null); 
+  const [data, setData] = useState();
+  const [user, setUser] = useState(); 
   const [error, setError] = useState(null);
 
-useEffect( async () => {
-  let loadDash = await API.getUser(currentUser.email);
-  setData(loadDash);
-  setUser(loadDash.data.name);
-  console.log(loadDash.data.name);
+const loadExchanges = async () => {
+  const resultExchanges = await API.getExchanges(currentUser.email);
+  if(error) {
+    console.log("Error loading exchanges", + error);
+    setError(error);
+    return <h3>Error Loading Exchanges</h3>
+  };
   
-}, [])
+  setData(resultExchanges.data);
+  console.log("These are the exchanges", resultExchanges.data)
+};
+
+const loadDash = async () => {
+  const resultUser = await API.getUser(currentUser.email);
+  if(error) {
+    console.log("Error loading User", + error);
+    setError(error);
+    return <h3>Error loading User</h3>
+  };
+  setUser(resultUser.data.name);
+  console.log("This is the user", resultUser.data.name);
+};
+
+useEffect(() => {
+  loadDash();
+  loadExchanges();
+}, []);
+
+
+// useEffect( async () => {
+//   let loadDash = await API.getUser(currentUser.email);
+//   setUser(loadDash.data.name);
+//   console.log(loadDash.data.name);
+  
+// }, [])
+
 
 
     return (
